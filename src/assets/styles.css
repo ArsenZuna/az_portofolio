@@ -379,12 +379,13 @@
 
 /*Contact Form*/
 .form-container {
-    width: 75%;
+    width: 100%;
 }
 
 .form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-self: center;
     font-family: inherit;
     gap: 10px;
