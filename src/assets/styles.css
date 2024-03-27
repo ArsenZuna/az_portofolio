@@ -1,0 +1,569 @@
+/*
+.custom-shape-divider-bottom-1709643790 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1709643790 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1709643790 .shape-fill {
+    fill: whitesmoke;
+}
+*/
+
+.typewriter {
+    display: inline-block;
+    color: whitesmoke;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: inherit; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em; /* Adjust as needed */
+    animation:
+            typing 1.5s steps(100, end) forwards,
+            blink-caret .5s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+/* .butt */
+.butt {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #17C3B2;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.butt::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000F25;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.butt::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000F25;
+    transition: 0.5s;
+}
+
+.butt:hover::before, .butt:hover::after {
+    transform: scale(0)
+}
+
+.butt:hover {
+    box-shadow: inset 0px 0px 35px #dac23c;
+}
+
+/*Lists*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+    box-sizing: border-box;
+    font-family: "Monospaced", monospace;
+    font-weight: bolder;
+}
+
+.lista {
+    position: relative;
+    font-weight: bolder;
+}
+.lista h2 {
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+.lista ul {
+    position: relative;
+}
+.lista ul li {
+    font-weight: bolder;
+    position: relative;
+    left: 0;
+    color: #fce4ec;
+    list-style: none;
+    margin: 4px 0;
+    border-left: 2px solid #17C3B2;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.lista ul li:hover {
+    left: 10px;
+}
+.lista ul li span {
+    position: relative;
+    padding: 8px 8px 8px 12px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+}
+.lista ul li:hover span {
+    color: #dac23c;
+}
+
+.lista ul li:hover:before {
+    transform: scaleX(1);
+}
+
+/*Accordion*/
+.accordion-item{
+    background-color: transparent;
+    border-radius: .4rem;
+}
+
+.accordion-item hr{
+    border: 1px solid #17C3B2;
+}
+
+.accordion-link{
+    font-size: 1.6rem;
+    color: rgba(255,255,255,.8);
+    text-decoration: none;
+    border-bottom: solid 1px #17C3B2;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.accordion-link h3{
+    font-weight:500;
+    font-size: 18px;
+}
+
+.accordion-link i{
+    color: #e7d5ff;
+    padding: .5rem;
+}
+
+.accordion-link ul{
+    display:flex;
+    align-items: flex-end;
+    list-style-type: none;
+    margin-left: 25px;
+}
+
+.accordion-link li{
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 0 0 1px 5px;
+}
+
+.accordion-link div{
+    display: flex;
+}
+
+.accordion-link .ion-md-arrow-down{
+    display: none;
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    transition: max-height 650ms;
+}
+
+.answer p{
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 1rem;
+}
+
+.accordion-item:target .answer{
+    max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link .ion-md-arrow-forward{
+    display: none;
+}
+
+.accordion-item:target .accordion-link .ion-md-arrow-down{
+    display: block;
+}
+
+
+/*Section 2*/
+.section2{
+    position: relative;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: 'Monospaced', monospace;
+    color: #fff;
+}
+.vis{
+    font-weight: 600;
+    overflow: hidden;
+    height: 30px;
+    padding: 0 50px;
+}
+.vis:before{
+    content: '[';
+    left: 0;
+    line-height: 30px;
+}
+.vis:after{
+    content: ']';
+    right: 0;
+    line-height: 30px;
+}
+.vis::before, .vis:after{
+    position: absolute;
+    top: 0;
+    color: #dac23c;
+    font-size: 30px;
+    animation: opacity 2s;
+    animation-iteration-count: infinite;
+}
+
+.vis ul{
+    margin-top: 0;
+    text-align: left;
+    list-style: none;
+    text-transform: uppercase;
+    animation: change 6s;
+    animation-iteration-count: infinite;
+}
+.vis ul li{
+    line-height: 30px;
+}
+@keyframes opacity {
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+@keyframes change {
+    0%, 12%, 100%{
+        transform: translateY(0);
+    }
+    17%, 29%{
+        transform: translateY(-25%);
+    }
+    34%, 46%{
+        transform: translateY(-50%);
+    }
+    51%, 63%{
+        transform: translateY(-75%);
+    }
+}
+
+
+/*Card
+.card {
+    --background: linear-gradient(to left, #dac23c 0%, #dac23c 100%);
+    width: 250px;
+    height: 320px;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #17C3B2;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #17C3B2;
+    background: var(--background);
+    transition: opacity .5s;
+}
+
+.card-info {
+    --color: #000F25;
+    background: var(--color);
+    color: var(--color);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+    font-family: "Monospaced", monospace;
+    padding-top: 40%;
+}
+
+.card .title {
+    font-family: "Monospaced", monospace;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.card-info span {
+    opacity: 0.5;
+    font-size: 15px;
+}
+
+.card-info a {
+    opacity: 0;
+}
+
+.card-info:hover a {
+    color: #000F25;
+    opacity: 100%;
+    font-size: 25px;
+}
+
+/*Hover
+.card:hover::after {
+    opacity: 0;
+}
+
+
+.card:hover .card-info{
+    color: #000F25;
+    background: #17C3B2;
+    transition: color, background 1s;
+}
+
+.card:hover .card-info span {
+    color: #000F25;
+    transition: color 1s;
+}
+*/
+
+/*Contact Form*/
+.form-container {
+    width: 75%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-family: inherit;
+    gap: 10px;
+    padding-inline: 32px;
+    padding-bottom: 7px;
+    background-color: #17C3B2;
+    border-radius: 10px;
+}
+
+.form-heading {
+    text-align: center;
+    margin: 32px;
+    color: #000F25;
+    font-size: 32px;
+    background-color: transparent;
+    align-self: center;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #000F25;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #ccd6f6;
+    padding-inline: 1em;
+}
+
+.sendMessage-btn {
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #000F25;
+    font-weight: bolder;
+    font-size: 18px;
+    outline: 1px solid #dac23c;
+    transition: all ease-in-out 0.3s;
+}
+
+.sendMessage-btn:hover {
+    transition: all ease-in-out 0.3s;
+    background-color: #dac23c;
+    color: #000F25;
+    cursor: pointer;
+}
+
+.form-card1 {
+    background-image: linear-gradient(163deg, #dac23c 0%, #dac23c 100%);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.form-card1:hover {
+    box-shadow: 0px 0px 30px 1px rgba(100, 255, 218, 0.3);
+}
+
+.form-card2 {
+    border-radius: 0;
+    transition: all 0.2s;
+}
+
+.form-card2:hover {
+    transform: scale(0.98);
+    border-radius: 10px;
+}
+
+/*Projects*/
+.card {
+    width: 400px;
+    height: 225px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+    width: 120%;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+    transform: rotateX(0deg);
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #000F25;
+    font-weight: 700;
+}
+
+.card:hover svg {
+    scale: 0;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+/*CV Button*/
+.cv_button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #17C3B2;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #17C3B2;
+}
+
+.cv_button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #17C3B2;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.cv_button:hover::before {
+    width: 105%;
+}
+
+.cv_button:hover {
+    color: #111;
+}
