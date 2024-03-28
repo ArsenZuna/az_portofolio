@@ -50,7 +50,7 @@ const ContactForm = () => {
 					className="input-field"
 				></textarea>
 						</div>
-						<button className="sendMessage-btn" type="submit">Send Message</button>
+						<input className="sendMessage-btn" value="Send Message" type="submit"/>
 					</form>
 				</div>
 			</div>
