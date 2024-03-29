@@ -10,9 +10,9 @@ const ContactForm = () => {
 
 	const templateParams = {
 		to_name: 'Arsen',
-		from_name: setName,
-		message: setMessage,
-		from_email: setEmail,
+		from_name: name,
+		message: message,
+		from_email: email,
 	};
 
 	const sendEmail = (e) => {
@@ -22,8 +22,8 @@ const ContactForm = () => {
 				publicKey: 'HRZxFHbB071q3qEwo', templateParams,
 			})
 			.then(
-				() => {
-					console.log('SUCCESS!');
+				(response) => {
+					console.log('SUCCESS!', response);
 					alert("Thank you for contacting me! Your message has been delivered and I will be in touch with you ASAP.")
 				},
 				(error) => {
