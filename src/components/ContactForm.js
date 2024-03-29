@@ -8,13 +8,6 @@ const ContactForm = () => {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 
-	const templateParams = {
-		to_name: 'Arsen',
-		from_name: name,
-		message: message,
-		from_email: email,
-	};
-
 	const sendEmail = (e) => {
 		e.preventDefault();
 
@@ -26,7 +19,7 @@ const ContactForm = () => {
 
 		emailjs.sendForm('arsenzuna01', 'email_template1',  formData,'HRZxFHbB071q3qEwo')
 			.then(
-				(response) => {
+				() => {
 					console.log('SUCCESS!');
 					alert("Thank you for contacting me! Your message has been delivered and I will be in touch with you ASAP.")
 				},
