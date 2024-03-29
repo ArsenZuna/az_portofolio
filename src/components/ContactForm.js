@@ -9,7 +9,7 @@ const ContactForm = () => {
 		e.preventDefault();
 
 		emailjs.sendForm('arsenzuna01', 'email_template1', form.current, {
-				publicKey: '8ytIz6sGi46Pjc10a',
+				publicKey: 'HRZxFHbB071q3qEwo',
 			})
 			.then(
 				() => {
