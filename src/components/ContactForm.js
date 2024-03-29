@@ -18,12 +18,16 @@ const ContactForm = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		emailjs.sendForm('arsenzuna01', 'email_template1',  form.current, {
-				publicKey: 'HRZxFHbB071q3qEwo', templateParams,
-			})
+		const formData = new FormData(form.current);
+		formData.append('to_name', 'Arsen');
+		formData.append('from_name', name);
+		formData.append('message', message);
+		formData.append('from_email', email);
+
+		emailjs.sendForm('arsenzuna01', 'email_template1',  formData,'HRZxFHbB071q3qEwo')
 			.then(
 				(response) => {
-					console.log('SUCCESS!', response);
+					console.log('SUCCESS!');
 					alert("Thank you for contacting me! Your message has been delivered and I will be in touch with you ASAP.")
 				},
 				(error) => {
