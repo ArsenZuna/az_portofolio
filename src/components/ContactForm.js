@@ -10,9 +10,9 @@ const ContactForm = () => {
 
 	const templateParams = {
 		to_name: 'Arsen',
-		from_name: name,
-		message: message,
-		from_email: email,
+		from_name: setName,
+		message: setMessage,
+		from_email: setEmail,
 	};
 
 	const sendEmail = (e) => {
