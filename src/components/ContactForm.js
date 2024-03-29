@@ -19,13 +19,7 @@ const ContactForm = () => {
 		e.preventDefault();
 
 		emailjs.sendForm('arsenzuna01', 'email_template1', form.current, {
-				publicKey: 'HRZxFHbB071q3qEwo', templateParams: {
-				...templateParams,
-				to_name: 'Arsen',
-				from_name: name,
-				message: message,
-				from_email: email,
-			}
+				publicKey: 'HRZxFHbB071q3qEwo', templateParams
 			})
 			.then(
 				() => {
