@@ -8,17 +8,24 @@ const ContactForm = () => {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 
+	const templateParams = {
+		to_name: 'Arsen',
+		from_name: name,
+		message: message,
+		from_email: email,
+	};
+
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		const formData = new FormData(form.current);
-		formData.append('to_name', 'Arsen');
-		formData.append('from_name', name);
-		formData.append('message', message);
-		formData.append('from_email', email);
-
-		emailjs.sendForm('arsenzuna01', 'email_template1',  formData, {
-				publicKey: 'HRZxFHbB071q3qEwo'
+		emailjs.sendForm('arsenzuna01', 'email_template1', form.current, {
+				publicKey: 'HRZxFHbB071q3qEwo', templateParams: {
+				...templateParams,
+				to_name: 'Arsen',
+				from_name: name,
+				message: message,
+				from_email: email,
+			}
 			})
 			.then(
 				() => {
