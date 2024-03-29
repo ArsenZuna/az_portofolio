@@ -17,7 +17,9 @@ const ContactForm = () => {
 		formData.append('message', message);
 		formData.append('from_email', email);
 
-		emailjs.sendForm('arsenzuna01', 'email_template1',  formData,'HRZxFHbB071q3qEwo')
+		emailjs.sendForm('arsenzuna01', 'email_template1',  formData, {
+				publicKey: 'HRZxFHbB071q3qEwo'
+			})
 			.then(
 				() => {
 					console.log('SUCCESS!');
