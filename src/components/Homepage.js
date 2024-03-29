@@ -26,7 +26,7 @@ const Homepage = () => {
 			<div className="d-flex justify-content-between" style={{paddingTop: "3%"}}>
 				{/*Hero Section*/}
 				<div className="container">
-					<div className="container-fluid row flex-lg-row-reverse gap-3 justify-content-center align-items-center">
+					<div className="container-fluid row flex-lg-row-reverse gap-3 justify-content-center align-items-center mx-1">
 						<div className="col-10 col-sm-8 col-lg-6">
 							<img src={Arsen}
 									 className="rounded d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500"

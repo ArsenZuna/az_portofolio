@@ -55,7 +55,6 @@
     background-color: transparent;
     color: white;
     transition: 1s;
-    border-radius: 0.3em;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -229,32 +228,32 @@
 /*Section 2*/
 .section2{
     position: relative;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 25px;
+    line-height: 25px;
     font-family: 'Monospaced', monospace;
     color: #fff;
 }
 .vis{
     font-weight: 600;
     overflow: hidden;
-    height: 30px;
-    padding: 0 50px;
+    height: 25px;
+    padding: 0 25px;
 }
 .vis:before{
     content: '[';
     left: 0;
-    line-height: 30px;
+    line-height: 25px;
 }
 .vis:after{
     content: ']';
     right: 0;
-    line-height: 30px;
+    line-height: 25px;
 }
 .vis::before, .vis:after{
     position: absolute;
     top: 0;
     color: #dac23c;
-    font-size: 30px;
+    font-size: 25px;
     animation: opacity 2s;
     animation-iteration-count: infinite;
 }
@@ -262,13 +261,13 @@
 .vis ul{
     margin-top: 0;
     text-align: left;
-    list-style: none;
+    list-style: square;
     text-transform: uppercase;
     animation: change 6s;
     animation-iteration-count: infinite;
 }
 .vis ul li{
-    line-height: 30px;
+    line-height: 25px;
 }
 @keyframes opacity {
     0%, 100%{

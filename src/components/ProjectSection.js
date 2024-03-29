@@ -7,7 +7,7 @@ import MovieBuffer from "../assets/MovieBuffer.png";
 
 const ProjectSection = () => {
 	return (
-		<div className="container-fluid row justify-content-between justify-content-md-center gap-4">
+		<div className="container-fluid row justify-content-between justify-content-md-center mx-1 gap-4">
 			<div className="card">
 				<img src={RealEstate} alt="realestate"/>
 				<div className="card__content">

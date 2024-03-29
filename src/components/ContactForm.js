@@ -14,9 +14,11 @@ const ContactForm = () => {
 			.then(
 				() => {
 					console.log('SUCCESS!');
+					alert("Thank you for contacting me! Your message has been delivered and I will be in touch with you ASAP.")
 				},
 				(error) => {
 					console.log('FAILED...', error.text);
+					alert("Unfortunately, your message was not delivered. Come back soon or try contacting me through your phone number.")
 				},
 			);
 	};
@@ -25,7 +27,7 @@ const ContactForm = () => {
 		<div className="form-container">
 			<div className="form-card1">
 				<div className="form-card2">
-					<form className="form" onSubmit={sendEmail}>
+					<form className="form" ref={form} onSubmit={sendEmail}>
 						<p className="form-heading">Contact Me</p>
 
 						<div className="form-field">
@@ -50,7 +52,7 @@ const ContactForm = () => {
 					className="input-field"
 				></textarea>
 						</div>
-						<input className="sendMessage-btn" value="Send Message" type="submit"/>
+						<button className="sendMessage-btn" type="submit">Send Message</button>
 					</form>
 				</div>
 			</div>
