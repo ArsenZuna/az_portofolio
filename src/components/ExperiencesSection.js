@@ -29,7 +29,7 @@ const ExperiencesSection = () => {
 				<div className="accordion-item" id="exp1">
 					<a className="accordion-link" href="#exp1">
 						<div className="flex">
-							<h3>DATA ANALYST at PAYLINK SHA</h3>
+							<h3>Data Analyst at PAYLINK SHA</h3>
 							<ul className="pt-lg-1">
 								<li>#SQL</li>
 								<li>#Oracle</li>
@@ -51,7 +51,7 @@ const ExperiencesSection = () => {
 				<div className="accordion-item" id="exp2">
 					<a className="accordion-link" href="#exp2">
 						<div className="flex">
-							<h3>SOFTWARE DEVELOPER at OTP BANK</h3>
+							<h3>Software Dev. at OTP BANK</h3>
 							<ul className="pt-lg-1">
 								<li>#SQL</li>
 								<li>#JavaScript</li>
@@ -72,7 +72,7 @@ const ExperiencesSection = () => {
 				<div className="accordion-item" id="exp3">
 					<a className="accordion-link" href="#exp3">
 						<div className="flex">
-							<h3>FRONTEND DEVELOPER at NEBULA LTD</h3>
+							<h3>Frontend Dev. at NEBULA</h3>
 							<ul className="pt-lg-1">
 								<li>#CSS</li>
 								<li>#JavaScript</li>
