@@ -24,7 +24,7 @@ const ExperiencesSection = () => {
 				</div>
 			</div>
 			<div className="col-lg-3"></div>
-			<div className="col-lg-7">
+			<div className="col-lg-7 ">
 				<h2 className="text-light fw-bold">Work Experiences</h2>
 				<div className="accordion-item" id="exp1">
 					<a className="accordion-link" href="#exp1">
@@ -65,7 +65,7 @@ const ExperiencesSection = () => {
 					<div className="answer">
 						<p>My main focus here consists mostly in report generation, fixing front-end issues or hardware defects,
 							checking datas, creating SQL scripts to perform certain jobs etc. I saw improvements since I
-							started working there in communication and scheduling, aswell in some PL/SQL skills.</p>
+							started working there in communication and scheduling, as well in some PL/SQL skills.</p>
 					</div>
 					<hr/>
 				</div>
@@ -87,8 +87,7 @@ const ExperiencesSection = () => {
 						<p>My main focus was to learn and improve front-end skills with web app development fundamentals as well
 							as programming languages and frameworks such as HTML, CSS, JavaScript, ReactJS, Bootstrap, Tailwind
 							and many other libraries for creating efficient web applications. Achieved knowledge and skills on
-							UI/UX designing by using Figma. Also, working here improved my abilities on how to work properly in a
-							team.</p>
+							UI/UX designing by using Figma.</p>
 					</div>
 				</div>
 			</div>
