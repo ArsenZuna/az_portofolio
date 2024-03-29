@@ -18,7 +18,7 @@ const ContactForm = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		emailjs.send('arsenzuna01', 'email_template1',  form.current, {
+		emailjs.sendForm('arsenzuna01', 'email_template1',  e.target, {
 				publicKey: 'HRZxFHbB071q3qEwo', templateParams,
 			})
 			.then(
