@@ -8,8 +8,8 @@ const ContactForm = () => {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 
-	const emailParams = {
-		to_name: 'Recipient Name',
+	const templateParams = {
+		to_name: 'Arsen',
 		from_name: name,
 		message: message,
 		from_email: email,
@@ -19,7 +19,7 @@ const ContactForm = () => {
 		e.preventDefault();
 
 		emailjs.sendForm('arsenzuna01', 'email_template1', form.current, {
-				publicKey: 'HRZxFHbB071q3qEwo', emailParams
+				publicKey: 'HRZxFHbB071q3qEwo', templateParams
 			})
 			.then(
 				() => {
