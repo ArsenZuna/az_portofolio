@@ -1,15 +1,25 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import '../assets/styles.css';
 import * as emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
 	const form = useRef(null);
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
+
+	const emailParams = {
+		to_name: 'Recipient Name',
+		from_name: name,
+		message: message,
+		from_email: email,
+	};
 
 	const sendEmail = (e) => {
 		e.preventDefault();
 
 		emailjs.sendForm('arsenzuna01', 'email_template1', form.current, {
-				publicKey: 'HRZxFHbB071q3qEwo',
+				publicKey: 'HRZxFHbB071q3qEwo', emailParams
 			})
 			.then(
 				() => {
@@ -31,13 +41,21 @@ const ContactForm = () => {
 						<p className="form-heading">Contact Me</p>
 
 						<div className="form-field">
-							<input required="" placeholder="Name" className="input-field" type="text"/>
+							<input
+								required=""
+								placeholder="Name"
+								className="input-field"
+								value={name}
+								onChange={(e) => setName(e.target.value)}
+								type="text"/>
 						</div>
 
 						<div className="form-field">
 							<input
 								required=""
 								placeholder="Email"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
 								className="input-field"
 								type="email"
 							/>
@@ -47,6 +65,8 @@ const ContactForm = () => {
         <textarea
 					required=""
 					placeholder="Message"
+					value={message}
+					onChange={(e) => setMessage(e.target.value)}
 					cols="30"
 					rows="3"
 					className="input-field"
