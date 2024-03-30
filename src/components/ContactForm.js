@@ -4,22 +4,12 @@ import * as emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
 	const form = useRef(null);
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [message, setMessage] = useState("");
-
-	const templateParams = {
-		to_name: 'Arsen',
-		from_name: name,
-		message: message,
-		from_email: email,
-	};
 
 	const sendEmail = (e) => {
 		e.preventDefault();
 
 		emailjs.sendForm('arsenzuna01', 'email_template1', form.current, {
-				publicKey: 'HRZxFHbB071q3qEwo', templateParams
+				publicKey: 'HRZxFHbB071q3qEwo'
 			})
 			.then(
 				() => {
@@ -45,8 +35,7 @@ const ContactForm = () => {
 								required=""
 								placeholder="Name"
 								className="input-field"
-								value={name}
-								onChange={(e) => setName(e.target.value)}
+								name="from_name"
 								type="text"/>
 						</div>
 
@@ -54,8 +43,7 @@ const ContactForm = () => {
 							<input
 								required=""
 								placeholder="Email"
-								value={email}
-								onChange={(e) => setEmail(e.target.value)}
+								name="from_email"
 								className="input-field"
 								type="email"
 							/>
@@ -65,8 +53,7 @@ const ContactForm = () => {
         <textarea
 					required=""
 					placeholder="Message"
-					value={message}
-					onChange={(e) => setMessage(e.target.value)}
+					name="message"
 					cols="30"
 					rows="3"
 					className="input-field"
