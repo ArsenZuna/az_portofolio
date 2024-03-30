@@ -55,8 +55,8 @@ const ExperiencesSection = () => {
 							<ul className="pt-lg-1">
 								<li>#SQL</li>
 								<li>#JavaScript</li>
+								<li>#React</li>
 								<li>#Figma</li>
-								<li>#Wordpress</li>
 							</ul>
 						</div>
 						<FontAwesomeIcon icon={faAngleUp} className="ion-md-arrow-down"/>
